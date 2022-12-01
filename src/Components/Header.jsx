@@ -6,11 +6,15 @@ export default function Header() {
     <header>
       <nav>
         <Link to="/" className="link">
-          Movies
+          Recipes
         </Link>
 
-        <Link to="/Pokemon" className="link">
-          Pokemon
+        <Link to="/Pokemons" className="link">
+          Pokemons
+        </Link>
+
+        <Link to="/Movies" className="link">
+          Movies
         </Link>
       </nav>
     </header>

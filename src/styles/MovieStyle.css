@@ -1,0 +1,16 @@
+.movieCard-container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.movieImg {
+  height: 400px;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 10px 10px 19.4564px rgba(0, 0, 0, 0.258);
+}
