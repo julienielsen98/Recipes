@@ -1,13 +1,15 @@
 import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../Components/Header";
-import { context } from "../../Components/Recipes/Context";
+import { context } from "../../Components/Context";
 let videoId = "";
 
 function RecipeInfo() {
   const { MealId } = useParams();
 
   const { fetchRecipesbyId, item } = useContext(context);
+
+  console.log(item);
 
   useEffect(() => {
     fetchRecipesbyId(MealId);

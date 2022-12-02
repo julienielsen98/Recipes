@@ -9,6 +9,12 @@
   border: black solid thin;
   text-align: center;
 }
+.search {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
 
 button {
   height: 27px;
@@ -22,21 +28,20 @@ button:hover {
   color: aliceblue;
 }
 
-.search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
 .searchresults {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
-  width: 600px;
+  width: 400px;
   font-size: 20px;
+  margin: 10px;
+}
+
+.meal-img {
+  height: 250px;
+  width: 400px;
 }
 
 .info-container {

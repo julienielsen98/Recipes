@@ -1,51 +1,43 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import FrontpageRecipes from "./Routers/Recipes/FrontpageRecipes";
-import RecipeInfo from "./Routers/Recipes/RecipeInfo";
-import { RecipeContext } from "./Components/Recipes/Context";
-import FrontpagePokemon from "./Routers/Pokemons/FrontpagePokemon";
-import Movies from "./Routers/Movies/Movies";
-import MovieInfo from "./Routers/Movies/MovieInfo";
-import RecipesByCategory from "./Routers/Recipes/RecipesByCategory";
+import Frontpage from "./Routers/Categories/Frontpage";
+import RecipeInfo from "./Routers/Categories/RecipeInfo";
+import RecipesByCategory from "./Routers/Categories/RecipesByCategory";
+import RecipesByIngredient from "./Routers/Categories/RecipesByIngredient";
+import RecipesByAreas from "./Routers/Categories/RecipesByAreas";
+import Search from "./Routers/Search/Search";
+import RandomRecipe from "./Routers/RandomRecipe/RandomRecipe";
 
 const router = createBrowserRouter([
   {
     path: "/",
 
-    element: (
-      <RecipeContext>
-        <FrontpageRecipes />
-      </RecipeContext>
-    ),
+    element: <Frontpage />,
   },
   {
     path: "/Recipe/:MealId",
-    element: (
-      <RecipeContext>
-        <RecipeInfo />
-      </RecipeContext>
-    ),
+    element: <RecipeInfo />,
   },
   {
     path: "/Category/:strCategory",
-    element: (
-      <RecipeContext>
-        <RecipesByCategory />
-      </RecipeContext>
-    ),
+    element: <RecipesByCategory />,
   },
 
   {
-    path: "/Pokemons",
-    element: <FrontpagePokemon />,
+    path: "/Ingredient/:strIngredient",
+    element: <RecipesByIngredient />,
   },
   {
-    path: "/Movies",
-    element: <Movies />,
+    path: "/Areas/:strArea",
+    element: <RecipesByAreas />,
   },
   {
-    path: "/Movies/:MovieId",
-    element: <MovieInfo />,
+    path: "/Search",
+    element: <Search />,
+  },
+  {
+    path: "/RandomRecipe",
+    element: <RandomRecipe />,
   },
 ]);
 

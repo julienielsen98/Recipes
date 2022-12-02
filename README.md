@@ -2,15 +2,19 @@
 
 ## Description
 
-React app to search for different :
+React app to get different recipes by:
 
-- Recipes
-- Pokemons
-- Movies
+- Categories
+- Searchbar
+- Generating random recipe
 
 Coded with three different API´s.
 
 ## Installation
+
+```
+cd my-app
+```
 
 Install dependancies:
 
@@ -26,25 +30,23 @@ npm start
 
 # Usage
 
-## Recipes:
+Used the API https://www.themealdb.com/api.php. and stored all the API-calls in a context which provides all the recipe pages.
 
-Used the API https://www.themealdb.com/api.php. and stored them in a context which provides all the recipe pages.
+## Categories:
 
-Scroll to the right to see all categories. Click the wanted category to see all recipes in that category. Then you can click on one of the recipes to se more details and a tutorial video.
+Scroll to the right to see all categories, ingredients and areas.
+Click the wanted category to see all recipes in that category.
+Then you can click on one of the recipes to se more details and a tutorial video.
 
-You can also use to search bar to search for a wanted recipe.
+## Searchbar:
 
-## Pokemon:
+You can use search bar in the search page to look up different recipes.
 
-Used the https://www.themealdb.com/api.php.
+Then you can click on one of the recipes to se more details and a tutorial video.
 
-Use the Next or Previous button to more Pokemons, or search for one at the search bar.
+## Random Recipe:
 
-## Movies:
-
-Used the https://www.themealdb.com/api.php.
-
-Scroll to the right to se all the listed movies at each search. Click the wanted movie to get more details.
+Click the Random recipe nav-button to generate a new recipe.
 
 # Dependencies
 
@@ -59,7 +61,3 @@ Scroll to the right to se all the listed movies at each search. Click the wanted
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
-
-# Author
-
-Julie Nielsen (@julienielsen98)

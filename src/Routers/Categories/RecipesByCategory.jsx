@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "../../Components/Header";
 import React, { useEffect, useContext } from "react";
-import { context } from "../../Components/Recipes/Context";
+import { context } from "../../Components/Context";
 import "../../styles/RecipesStyle.css";
 
 function RecipesByCategory() {

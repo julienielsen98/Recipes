@@ -1,12 +1,11 @@
+import React from "react";
 import { useState, useCallback, useContext } from "react";
 import Header from "../../Components/Header";
 import { useNavigate } from "react-router-dom";
-import Categories from "../../Components/Recipes/Categories";
-import { context } from "../../Components/Recipes/Context";
+import { context } from "../../Components/Context";
 
-const FrontpageRecipes = () => {
+function Search() {
   const [searchTerm, setSearchTerm] = useState("");
-
   let navigate = useNavigate();
 
   const { fetchHomePageMeals, meals } = useContext(context);
@@ -14,17 +13,12 @@ const FrontpageRecipes = () => {
   const fetchMealsHandler = useCallback(() => {
     fetchHomePageMeals(searchTerm);
   }, [searchTerm, fetchHomePageMeals]);
-
   return (
-    <div>
+    <>
       <Header />
-      <br />
-      <Categories />
-      <br />
-      <hr />
-      <br />
-      <div className="Frontpage-container">
-        <div className="search">
+      <br /> <br /> <br />
+      <div className="search">
+        <div>
           <input
             type="text"
             className="searchbar"
@@ -35,8 +29,7 @@ const FrontpageRecipes = () => {
 
           <button onClick={fetchMealsHandler}>Search</button>
         </div>
-
-        <div>
+        <div className="Results-container">
           {meals ? (
             meals.map((meal) => (
               <div
@@ -55,8 +48,8 @@ const FrontpageRecipes = () => {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
-export default FrontpageRecipes;
+export default Search;
